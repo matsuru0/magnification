@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>magnification</title>
+		<meta charset="utf-8">
+		<meta name="author" content="matsuru">
+		<meta name="description" content="simple magnification">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="test.css">
+		<link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+		<style type="text/css">
+			#container{
+				display:flex;
+				justify-content: flex-start;
+				flex-direction: column;
+				border : 1px black solid;
+				background: #30f0e9;
+				width:25%;
+				
+				
+			}
+			#container h2{
+
+				font-family: 'Alata';
+				text-align: center;
+
+
+			}
+			#container h3{
+				font-family: 'Aldrich';
+				text-align: center;
+			}
+			
+			button{
+				font-family: 'Aldrich';
+				margin: 20px;
+				border:none;
+				background-color: black;
+				color:white;
+				padding: 15px;
+				align-self: center;
+			}
+			button:hover{
+				background-color: lightblue;
+				color:white;
+			}
+			@media (max-width: 700px){
+				#container{
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="container">
+			<h2>magnification</h2>
+			<h2 id="number" >0</h2>
+			<button onclick="count()">count</button>
+			<button onclick="reset2()">reset</button>
+			<h2>your high score : </h2>
+			<h2 id="score" >0</h2>
+			<button onclick="resetscore()">reset score</button>
+			<button onclick="mainmenu()">main menu</button>
+		</div>
+
+	<script type="text/javascript">
+		function mainmenu(){
+			window.open('mainmenu.html','_parent');
+		}
+		var saved = 0;
+		function resetscore(){
+			number = 0;
+			data = 0;
+			saved = 0;
+			document.getElementById('score').innerHTML = 0;
+		}
+		function reset2(){
+			console.log('reseted');
+			
+			var data = saved;
+			if (number > data){
+				saved = number;
+				document.getElementById('score').innerHTML = number;
+			}else{
+				document.getElementById('score').innerHTML = data;
+			}
+			
+
+
+			number = 0;
+			document.getElementById('number').innerHTML = 0;
+
+		}
+		var number = 0
+		 function count(){
+		 	
+
+		 	//var number2= parseInt(document.getElementById('number').value);
+		 	number += 1;
+		 	
+		 	document.getElementById('number').innerHTML = number;
+		 }
+	</script>
+	</body>
+</html>

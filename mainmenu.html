@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>menu</title>
+		<meta charset="utf-8">
+		<meta name="author" content="matsuru">
+		<meta name="description" content="simple magnification">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="test.css">
+		<link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+		<style type="text/css">
+			body{
+				margin:0;
+			}
+			#container{
+				display:flex;
+				justify-content: center;
+				flex-direction: column;
+				border : 1px black solid;
+				background: #30f0e9;
+				width:25%;
+				height: 600px;
+			}
+			#container h2{
+				font-family: 'Alata';
+				text-align: center;
+
+			}
+			#container h3{
+				font-family: 'Aldrich';
+				text-align: center;
+			}
+			
+			button{
+				font-family: 'Aldrich';
+				margin: 20px;
+				border:none;
+				background-color: black;
+				color:white;
+				padding: 15px;
+				align-self: center;
+			}
+			button:hover{
+				background-color: lightblue;
+				color:white;
+			}
+			@media (max-width: 700px){
+				#container{
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h2>magnification</h2>
+			<button onclick="start()">Start</button>
+			<button onclick="about()">About</button>
+			
+
+		</div>
+		<script type="text/javascript">
+			function start(){
+				window.open('index.html','_parent');
+			}
+			function about(){
+				window.open('about.html','_parent');
+			}
+		</script>
+	</body>
+</html>

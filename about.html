@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>about</title>
+		<meta charset="utf-8">
+		<meta name="author" content="matsuru">
+		<meta name="description" content="simple magnification">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="test.css">
+		<link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+		<style type="text/css">
+			body{
+				margin:0;
+			}
+			#container{
+				display:flex;
+				justify-content: center;
+				flex-direction: column;
+				border : 1px black solid;
+				background: #30f0e9;
+				width:25%;
+				height: 600px;
+			}
+			#container h2{
+				font-family: 'Alata';
+				text-align: center;
+
+			}
+			#container h3{
+				font-family: 'Aldrich';
+				text-align: center;
+			}
+			
+			button{
+				font-family: 'Aldrich';
+				margin: 20px;
+				border:none;
+				background-color: black;
+				color:white;
+				padding: 15px;
+				align-self: center;
+			}
+			button:hover{
+				background-color: lightblue;
+				color:white;
+			}
+			a{
+				width: 10%;
+				align-self: center;
+			}
+			img:hover{
+				
+			}
+			@media (max-width: 700px){
+				#container{
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h2>magnification</h2>
+			<h3>hello my name is bilel i am from algeria this application made in 7/6/2020 using javascript and html5 in less then 1 day have fun !</h3>
+			<a href="https://www.facebook.com/Bur-info-112098407204876" target="_blank"><img src="f_logo_RGB-Blue_72.png" width="100%" height="100%;"></a>
+			<button onclick="back()">go back</button>
+			
+
+		</div>
+		<script type="text/javascript">
+			function back(){
+				window.open('mainmenu.html','_parent');
+			}
+		</script>
+	</body>
+</html>
